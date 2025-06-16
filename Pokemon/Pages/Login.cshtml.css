@@ -1,0 +1,9 @@
+.login-bg {
+    background-image: url('./bg-login.jpg'); /* ajusta la ruta según tu proyecto */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+

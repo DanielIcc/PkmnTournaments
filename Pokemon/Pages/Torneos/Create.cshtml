@@ -1,0 +1,49 @@
+﻿@page
+@model Pokemon.Pages.Torneos.CreateModel
+@{
+    ViewData["Title"] = "Crear Torneo";
+}
+<div class="w-75 mx-auto">
+    <h2>Crear Torneo</h2>
+
+    <form method="post" class="mt-3">
+        <div class="mb-3">
+            <label asp-for="Torneo.Nombre" class="form-label"></label>
+            <input asp-for="Torneo.Nombre" class="form-control" />
+            <span asp-validation-for="Torneo.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Torneo.FechaInicio" class="form-label"></label>
+            <input asp-for="Torneo.FechaInicio" type="date" class="form-control" />
+            <span asp-validation-for="Torneo.FechaInicio" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Torneo.FechaFin" class="form-label"></label>
+            <input asp-for="Torneo.FechaFin" type="date" class="form-control" />
+            <span asp-validation-for="Torneo.FechaFin" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Torneo.Tipo" class="form-label">Tipo de Torneo</label>
+            <select asp-for="Torneo.Tipo" class="form-select" asp-items="Model.TiposTorneo">
+                <option value="">Seleccione un tipo</option>
+            </select>
+            <span asp-validation-for="Torneo.Tipo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Torneo.Descripcion" class="form-label"></label>
+            <textarea asp-for="Torneo.Descripcion" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Torneo.Descripcion" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Crear</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

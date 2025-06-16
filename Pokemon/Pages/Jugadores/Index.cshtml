@@ -1,0 +1,40 @@
+﻿@page
+@model Pokemon.Pages.Jugadores.IndexModel
+@{
+    ViewData["Title"] = "Lista de Jugadores";
+}
+
+<div class="w-75 mx-auto table-responsive">
+    <h2>Lista de Jugadores</h2>
+    <a asp-page="/Jugadores/Create" class="btn btn-primary mb-5" style="float:right;">Nuevo</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apodo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var jugador in Model.Jugadores)
+            {
+                <tr>
+                    <td>@jugador.Id</td>
+                    <td>@jugador.Nombre</td>
+                    <td>@jugador.Apodo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <nav>
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a class="page-link" asp-route-pageNumber="@i">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
+

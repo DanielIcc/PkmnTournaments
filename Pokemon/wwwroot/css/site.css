@@ -1,0 +1,75 @@
+.validation-summary-errors ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+}
+
+
+.bd-navbar:after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: block;
+    content: "";
+    background-image: linear-gradient(rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), .95));
+}
+/*Tarjetas scroll*/
+
+.card-scroll-wrapper {
+    position: relative;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+}
+
+    .scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+
+.card-item {
+    flex: 0 0 auto;
+    width: 220px;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.scroll-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.card-scroll-wrapper:hover .scroll-arrow {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-arrow svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.scroll-arrow.left {
+    left: 0;
+}
+
+.scroll-arrow.right {
+    right: 0;
+}

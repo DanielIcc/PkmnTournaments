@@ -1,0 +1,74 @@
+﻿@page
+@using Pokemon.Data.Models
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="container-fluid">
+    @if (Model.Jugadores == null || !Model.Jugadores.Any())
+    {
+        <div class="alert alert-info">
+            No hay jugadores para mostrar.
+        </div>
+    }
+    else
+    {
+        <h2>Jugadores</h2>
+        <div class="card-scroll-wrapper mt-5 mb-5">
+            <div class="scroll-arrow left" onclick="scrollCards(-1)">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+            </div>
+
+            <div id="scrollContainer" class="scroll-container">
+                @foreach (var jugador in Model.Jugadores)
+                {
+                    <div class="card-item bg-body text-body border shadow-sm">
+                        <h5>@jugador.Nombre</h5>
+                        <p>Puntos: @jugador.Apodo</p>
+                    </div>
+                }
+            </div>
+
+            <div class="scroll-arrow right" onclick="scrollCards(1)">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" /></svg>
+            </div>
+        </div>
+    }
+
+    @if (Model.Torneos == null || !Model.Torneos.Any())
+    {
+        <div class="alert alert-info">
+            No hay Torneos para mostrar.
+        </div>
+    }
+    else
+    {
+        <h2>Torneos</h2>
+        <div class="card-scroll-wrapper mt-5 mb-5">
+            <div class="scroll-arrow left" onclick="scrollCards(-1)">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+            </div>
+
+            <div id="scrollContainer" class="scroll-container">
+                @foreach (var torneo in Model.Torneos)
+                {
+                    <div class="card-item bg-body text-body border shadow-sm">
+                        <h5>@torneo.Nombre</h5>
+                        <p>Fecha de Inicio: @torneo.FechaInicio.ToString("dd/MM/yyyy")</p>
+                        @if (torneo.Estado == EstadoTorneo.Finalizado)
+                        {
+                            <p>Ganador @torneo.Ganador</p>                            
+                        }
+                        <p class="fw-bold text-@(torneo.Estado == EstadoTorneo.Iniciado ? "success" : torneo.Estado == EstadoTorneo.Cancelado ? "danger" : "secondary")">
+                            @torneo.Estado
+                        </p>
+                    </div>
+                }
+            </div>
+
+            <div class="scroll-arrow right" onclick="scrollCards(1)">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" /></svg>
+            </div>
+        </div>
+    }
+</div>

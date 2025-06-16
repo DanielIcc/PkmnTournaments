@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36119.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.csproj", "{90383AF9-ED82-48BA-919B-C4F05FB19E3D}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Angular", "Angular\", "{0B8723D2-0EEC-409B-789F-A68E0DC4ABEB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52228"
+		Debug.AspNetCompiler.PhysicalPath = "Angular\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52228\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52228"
+		Release.AspNetCompiler.PhysicalPath = "Angular\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52228\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52228"
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52228"
+		Debug.AspNetCompiler.PhysicalPath = "Angular\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52228\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52228"
+		Release.AspNetCompiler.PhysicalPath = "Angular\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52228\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52228"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90383AF9-ED82-48BA-919B-C4F05FB19E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90383AF9-ED82-48BA-919B-C4F05FB19E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90383AF9-ED82-48BA-919B-C4F05FB19E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90383AF9-ED82-48BA-919B-C4F05FB19E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8723D2-0EEC-409B-789F-A68E0DC4ABEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8723D2-0EEC-409B-789F-A68E0DC4ABEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8723D2-0EEC-409B-789F-A68E0DC4ABEB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8723D2-0EEC-409B-789F-A68E0DC4ABEB}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFB04745-191D-4026-B63B-6682C91C8D2E}
+	EndGlobalSection
+EndGlobal

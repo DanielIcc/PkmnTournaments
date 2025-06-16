@@ -1,0 +1,31 @@
+﻿@page
+@model Pokemon.Pages.Jugadores.CreateModel
+@{
+    ViewData["Title"] = "Agregar Jugador";
+}
+<div class="w-75 mx-auto">
+    <h2>Agregar Jugador</h2>
+
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="Jugador.Nombre" class="form-label"></label>
+            <input asp-for="Jugador.Nombre" class="form-control" />
+            <span asp-validation-for="Jugador.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Jugador.Apodo" class="form-label"></label>
+            <input asp-for="Jugador.Apodo" class="form-control" />
+            <span asp-validation-for="Jugador.Apodo" class="text-danger"></span>
+        </div>
+        
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
