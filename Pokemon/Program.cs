@@ -97,7 +97,9 @@ namespace Pokemon
             app.UseAuthorization();
 
             app.MapRazorPages();
-            //rama deleted conflicto
+
+            //rama deleted rama1
+
             app.Run();
             //SIN ERROR
         }
