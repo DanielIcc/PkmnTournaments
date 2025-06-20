@@ -89,7 +89,7 @@ namespace Pokemon
                 await next();
 
             });
-            //PRUEBA
+     
             app.UseSession();
 
             app.UseAuthentication();
