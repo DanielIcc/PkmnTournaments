@@ -99,6 +99,7 @@ namespace Pokemon
             app.MapRazorPages();
 
             app.Run();
+            //SIN ERROR
         }
     }
 }
