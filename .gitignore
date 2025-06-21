@@ -39,7 +39,6 @@ artifacts/
 
 # === Angular ===
 ## Angular build output
-dist/
 out-tsc/
 
 ## NPM packages
