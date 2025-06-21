@@ -5,7 +5,7 @@ using Pokemon.Data;
 using Pokemon.Data.Models;
 using Pokemon.Services;
 using System.Security.Claims;
-
+soria
 namespace Pokemon
 {
     public class Program
